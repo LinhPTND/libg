@@ -1,0 +1,73 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script>
+        function object1() {
+            var a = "hieiei"
+            var b = "hieiei"
+            var input = document.getElementById("number").value
+            console.log(Number(input) + 2)
+            var obj = new Object();
+            obj.name = "HT SOFTWARE";
+            obj.address = "HCM";
+
+            obj.staff = [{ id: 1, name: 'hieu', age: 27 }, { id: 2, name: 'tuan', age: 26 }]
+            console.log(obj)
+
+            // obj.name = "Tuấn";
+            // var obj2 = new Object();
+            // obj2.name = "tuấn";
+            // obj2.address = "BD";
+            // obj2.age = 21;
+            // console.log(obj.age);
+            // console.log(obj2);
+            // console.log('TÔi tên là ' + obj.name + ' tuổi là:' + obj.age + ' Ở '  + obj.address)
+        }
+        function object2() {
+            var obj2 = new Object({ name: 'Phụng', address: 'Đồng Nai', age: 19 });
+            obj2.phone = '094192829';
+            // obj2.name = 'Po';
+            // obj2.name = 40;
+            // obj2.toString() = function () {
+            //     return 'name: ' + this.name + ', age' + this.age;
+            // }
+            console.log(obj2);
+        }
+        const arr = [{ id: 1, name: 'san tenis', stt: true }, { id: 2, name: 'san gold', stt: true }];
+        function isNumber(evt) {
+            evt = (evt) ? evt : window.event;
+            var charCode = (evt.which) ? evt.which : evt.keyCode;
+            if (charCode > 31 && (charCode < 48 || charCode > 57)) {
+                return false;
+            }
+            return true;
+        }
+    </script>
+</head>
+
+<body>
+    <input type="text" class="textfield" value="" id="extra7" name="extra7" onkeypress="return isNumber(event)" />
+
+    <input id="number" type="number" />
+    <button type="button" class="btn btn-primary" onclick="object1()">object1</button>
+    <hr>
+    <button type="button" class="btn btn-primary" onclick="object2()">object2</button>
+    <hr>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
